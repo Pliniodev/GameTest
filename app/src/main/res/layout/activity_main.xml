@@ -1,0 +1,1017 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="0dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_vertical"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_up_right"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_left_down"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_vertical"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_right_down"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_horizontal"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_up_left"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".25" />
+
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="@string/step_5"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_step_5"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".25" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_step_vertical" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_up_right"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_left_down"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_4_25"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_4_50"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".50" />
+
+            <TextView
+                android:id="@+id/tv_4"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="@string/step_4"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_step_4_50"
+                app:layout_constraintStart_toStartOf="@+id/guideline_step_4_25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".25" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_step_vertical" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_vertical"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_3_50"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".50" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_3_75"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".75" />
+
+            <TextView
+                android:id="@+id/tv_3"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="@string/step_3"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_step_3_75"
+                app:layout_constraintStart_toStartOf="@+id/guideline_step_3_50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".25" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_c_up_right" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_step_horizontal" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_c_left_down" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_vertical"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_right_down"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_horizontal"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_up_left"
+                />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_2_25"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_2_50"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".50" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="@string/step_2"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_step_2_50"
+                app:layout_constraintStart_toStartOf="@+id/guideline_step_2_25"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".25" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_step_vertical" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_up_right"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_c_left_down"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_1_50"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".50" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_step_1_75"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".75" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:text="@string/step_1"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_step_1_75"
+                app:layout_constraintStart_toStartOf="@+id/guideline_step_1_50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".25" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_step_vertical"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_grass" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_street_vertical"
+                />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="4"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/ic_grass"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_30"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_20"-->
+<!--        app:srcCompat="@drawable/ic_c_right_down" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_30"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_20"-->
+<!--        app:srcCompat="@drawable/ic_street_horizontal" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_30"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_20"-->
+<!--        app:srcCompat="@drawable/ic_c_up_left" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_30"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_20"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    &lt;!&ndash;IMAGEVIEW GUIDELINE VERTICAL 40%&ndash;&gt;-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_step_5"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_40"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_30"-->
+<!--        app:srcCompat="@drawable/ic_step_vertical" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_40"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_30"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_40"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_30"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_40"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_30"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    &lt;!&ndash;IMAGEVIEW GUIDELINE VERTICAL 50%&ndash;&gt;-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_50"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_40"-->
+<!--        app:srcCompat="@drawable/ic_c_up_right" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_50"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_40"-->
+<!--        app:srcCompat="@drawable/ic_c_left_down" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_50"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_40"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_50"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_40"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    &lt;!&ndash;IMAGEVIEW GUIDELINE VERTICAL 60%&ndash;&gt;-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_60"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_50"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_step_4"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_60"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_50"-->
+<!--        app:srcCompat="@drawable/ic_step_vertical" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_60"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_50"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_60"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_50"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    &lt;!&ndash;IMAGEVIEW GUIDELINE VERTICAL 70%&ndash;&gt;-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_70"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_60"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_70"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_60"-->
+<!--        app:srcCompat="@drawable/ic_street_vertical" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_70"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_60"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_70"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_60"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    &lt;!&ndash;IMAGEVIEW GUIDELINE VERTICAL 80%&ndash;&gt;-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_80"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_70"-->
+<!--        app:srcCompat="@drawable/ic_grass" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_80"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_25"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_70"-->
+<!--        app:srcCompat="@drawable/ic_c_up_right" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_80"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_50"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_70"-->
+<!--        app:srcCompat="@drawable/ic_step_horizontal" />-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/guideline_h_80"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/guideline_v_75"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/guideline_h_70"-->
+<!--        app:srcCompat="@drawable/ic_c_left_down" />-->
+
+
+
+
+</ScrollView>
