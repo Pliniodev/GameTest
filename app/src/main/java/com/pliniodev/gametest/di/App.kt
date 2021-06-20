@@ -22,7 +22,9 @@ class App: Application() {
                 presentationModules,
                 networkModules,
                 dataModules,
-                domainModules
+                domainModules,
+                databaseModule,
+                repositoryModule
             )
         }
     }

@@ -4,12 +4,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pliniodev.gametest.constants.Constants
+import com.pliniodev.gametest.data.local.model.StepModel
+import com.pliniodev.gametest.data.local.repository.StepRepository
 import com.pliniodev.gametest.domain.usecase.GetPhraseUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainViewModel(
-    private val useCase: GetPhraseUseCase
+    private val useCase: GetPhraseUseCase,
+    private val database: StepRepository
 ): ViewModel() {
     val lastSelectedStepLiveData = MutableLiveData<Int>()
     val phraseLiveData = MutableLiveData<String>()
@@ -34,7 +37,7 @@ class MainViewModel(
     }
 
     fun updateBD() {
-        //todo passou um dia?
+        //todo passou um dia? faça
         viewModelScope.launch(Dispatchers.IO) {
             runCatching {
                 useCase()
@@ -50,7 +53,14 @@ class MainViewModel(
     }
 
     private fun updatePhrasesOnBd(phraseMutableList: MutableList<String>) {
-
+        var i = 1
+        for (phrase in phraseMutableList) {
+            val stepModel = StepModel(
+                stepNumber = i,
+                phrase = phrase
+            )
+            i++
+            database.saveStepData(stepModel)
+        }
     }
-
 }
