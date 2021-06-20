@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/ll_wrapper"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp"
+    android:background="@drawable/shape_toaster">
+
+    <TextView
+        android:id="@+id/tv_toaster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="impsum"
+        android:textSize="16sp"
+        android:layout_marginBottom="20dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ok_button"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        app:cornerRadius="20dp"
+        app:backgroundTint="#F06292"
+        android:textStyle="bold"
+        android:text="OK"/>
+</LinearLayout>
