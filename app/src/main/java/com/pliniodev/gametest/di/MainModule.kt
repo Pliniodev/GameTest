@@ -1,5 +1,9 @@
 package com.pliniodev.gametest.di
 
+import com.pliniodev.gametest.data.local.provideDatabase
+import com.pliniodev.gametest.data.local.provideStepDAO
+import com.pliniodev.gametest.data.local.repository.StepRepository
+import com.pliniodev.gametest.data.local.repository.StepRepositoryImpl
 import com.pliniodev.gametest.data.remote.api.ApiService
 import com.pliniodev.gametest.data.remote.remotedatasource.RemoteDataSource
 import com.pliniodev.gametest.data.remote.remotedatasource.RemoteDataSourceImpl
@@ -14,13 +18,22 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val presentationModules = module {
-    viewModel{ MainViewModel(get()) }
+    viewModel{ MainViewModel(useCase = get(), database = get()) }
 }
 
 val networkModules = module {
     single { provideOkHttpClient() }
     single { provideRetrofit(get()) }
     single { createApi<ApiService>(get()) }
+}
+
+val databaseModule = module {
+    single { provideDatabase(application = get()) }
+    single { provideStepDAO(database = get()) }
+}
+
+val repositoryModule = module {
+    single<StepRepository> { StepRepositoryImpl(get()) }
 }
 
 val dataModules = module {
