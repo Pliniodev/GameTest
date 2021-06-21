@@ -1,9 +1,11 @@
 package com.pliniodev.gametest.di
 
+import android.content.SharedPreferences
 import com.pliniodev.gametest.data.local.provideDatabase
 import com.pliniodev.gametest.data.local.provideStepDAO
 import com.pliniodev.gametest.data.local.repository.StepRepository
 import com.pliniodev.gametest.data.local.repository.StepRepositoryImpl
+import com.pliniodev.gametest.data.local.sharedpreferences.getSharedPrefs
 import com.pliniodev.gametest.data.remote.api.ApiService
 import com.pliniodev.gametest.data.remote.remotedatasource.RemoteDataSource
 import com.pliniodev.gametest.data.remote.remotedatasource.RemoteDataSourceImpl
@@ -14,11 +16,22 @@ import com.pliniodev.gametest.data.remote.retrofit.provideRetrofit
 import com.pliniodev.gametest.domain.repository.ApiRepository
 import com.pliniodev.gametest.domain.usecase.GetPhraseUseCase
 import com.pliniodev.gametest.presentation.MainViewModel
+import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val presentationModules = module {
-    viewModel{ MainViewModel(useCase = get(), database = get()) }
+    viewModel{ MainViewModel(
+        useCase = get(),
+        database = get(),
+        shared = get(),
+        sharedEditor = get()
+    )}
+}
+
+val sharedPrefModule = module {
+    single { getSharedPrefs(androidApplication()) }
+    single<SharedPreferences.Editor> { getSharedPrefs(androidApplication()).edit() }
 }
 
 val networkModules = module {

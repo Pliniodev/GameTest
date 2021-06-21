@@ -6,5 +6,5 @@ interface StepRepository {
 
     fun saveStepData(stepModel: StepModel): Boolean
 
-//    fun getPhrase(stepNumber: Int): StepModel
+    fun getPhrase(stepNumber: Int): StepModel
 }

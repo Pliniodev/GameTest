@@ -1,9 +1,7 @@
 package com.pliniodev.gametest.presentation
 
 import android.app.Activity
-import android.graphics.Rect
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.view.ViewTreeObserver.OnPreDrawListener
@@ -18,14 +16,12 @@ import com.pliniodev.gametest.constants.Constants
 import com.pliniodev.gametest.databinding.ActivityMainBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private val viewModel: MainViewModel by viewModel()
     private lateinit var binding: ActivityMainBinding
-    private lateinit var lastStepSelected : LottieAnimationView
-    private var coordenates = intArrayOf(0,0)
-    private var sizeOfScreen = intArrayOf(0,0)
+    private lateinit var lastStepSelected: LottieAnimationView
+    private var coordenates = intArrayOf(0, 0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,59 +32,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setListeners()
         observers()
         requestLastStep()
-        getDisplaySize()
         updateBD()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        //if first run
+        viewModel.registerDate()
     }
 
     private fun updateBD() {
         viewModel.updateBD()
     }
 
-    private fun getDisplaySize() {
-        // get device dimensions
-//        val displayMetrics = DisplayMetrics()
-//        windowManager.defaultDisplay.getMetrics(displayMetrics)
-//        sizeOfScreen[0] = displayMetrics.widthPixels
-//        sizeOfScreen[1] = displayMetrics.heightPixels
-    }
-
-    private fun Toast.showCustomToast(message: String, activity: Activity, x: Int, y: Int){
-        val layout = activity.layoutInflater.inflate (
-            R.layout.custom_toaster,
-            activity.findViewById(R.id.ll_wrapper)
-        )
-
-        val textView = layout.findViewById<TextView>(R.id.tv_toaster)
-        textView.text = message
-
-        //preciso chegar no valor de 460
-//        var xset = (coordenates[0] - (sizeOfScreen[0]/3).toInt() )
-//        var xset = (coordenates[0]-(coordenates[0]-50).toInt() )
-//        var xset = coordenates[0]/4 + coordenates[0]/4 + coordenates[0]/8
-//        var xset = coordenates[0]/2 + ((coordenates[0]/2)/8)//esse tá OKOKOKOK position step 01
-//        var xset = coordenates[0]/2 + ((coordenates[0]/2)/8//esse tá OKOKOKOK
-        var xset = binding.step2.x.toInt()
-
-        this.apply {
-            setGravity(Gravity.CENTER_VERTICAL , 0, 0)
-            setGravity(Gravity.START, xset, 0)
-            layout.findViewById<MaterialButton>(R.id.ok_button).setOnClickListener {
-                cancel()
-            }
-            view = layout
-            show()
-        }
-    }
-
     private fun getLocationOnScreen(view: View): IntArray {
-        val bounds = Rect()
-        view.getDrawingRect(bounds) // now bounds has the visible drawing coordinates of the view
-        binding.nestedScrollView.offsetDescendantRectToMyCoords(view, bounds)
         val location = IntArray(2)
-        location[0] = bounds.right
-        location[1] = bounds.top
-
-//        view.getLocationOnScreen(location)
+        when (view.id) {
+            R.id.step_1 -> location[0] = 405
+            R.id.step_2 -> location[0] = 140
+            R.id.step_3 -> location[0] = 405
+            R.id.step_4 -> location[0] = 140
+            R.id.step_5 -> location[0] = 0
+        }
         return location
     }
 
@@ -99,17 +64,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 override fun onPreDraw(): Boolean {
                     binding.nestedScrollView.viewTreeObserver.removeOnPreDrawListener(this)
                     binding.nestedScrollView.smoothScrollTo(0, 5000, 2000)
-//                    setScrollLocation(binding.nestedScrollView, binding.animationStep1)
                     return false
                 }
             })
-//        binding.nestedScrollView.post {
-//            binding.nestedScrollView.fullScroll(
-//                ScrollView.FOCUS_DOWN
-//            )
-//        }
     }
-
 
     private fun observers() {
         viewModel.lastSelectedStepLiveData.observe(this, { step ->
@@ -128,7 +86,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         })
 
         viewModel.updatedStep.observe(this, {
-            when(it) {
+            when (it) {
                 1 -> lastStepSelected = binding.animationStep1
                 2 -> lastStepSelected = binding.animationStep2
                 3 -> lastStepSelected = binding.animationStep3
@@ -136,20 +94,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 5 -> lastStepSelected = binding.animationStep5
             }
         })
+
+        viewModel.errorLiveData.observe(this, { error ->
+            if (error != "") {
+                Toast.makeText(this, "Erro: $error", Toast.LENGTH_LONG).show()
+            }
+        })
     }
 
     private fun showToaster(phrase: String?) {
         phrase?.let {
-            Toast(this).showCustomToast(it,this,
-                sizeOfScreen[0]*0.75.toInt(),
-            coordenates[1]-(sizeOfScreen[1]/2))
+            Toast(this).showCustomToast(
+                it, this,
+                coordenates[0],
+                coordenates[1]
+            )
         }
-        Log.i("xTAAAAg","x---> ${coordenates[0]-(sizeOfScreen[0]/2)}")
-        Log.i("xTAAAAg","x---> ${coordenates[0]}")
-        Log.i("xTAAAAg","x---> ${sizeOfScreen[0]*0.75.toInt()}")
-        Log.i("yTAAAAg","x---> ${coordenates[1]-(sizeOfScreen[1]/2)}")
-        Log.i("yTAAAAg","x---> ${coordenates[1]}")
-        Log.i("yTAAAAg","x---> ${sizeOfScreen[1]/2}")
     }
 
     private fun initStartAnimation(lastStepSelected: LottieAnimationView) {
@@ -168,7 +128,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun requestLastStep() {
-        //todo requisitar o último step selecionado caso não tenha passado de 1 dia
         viewModel.requestLastStepSelected()
     }
 
@@ -179,6 +138,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 coordenates = getLocationOnScreen(binding.step1)
                 viewModel.getPhrase(Constants.STEP1) // busca a frase na api
                 viewModel.updateSelectedStep(Constants.STEP1) //escreve no banco de dados
+
             }
             R.id.step_2 -> {
                 startOnClickAnimation(binding.animationStep2, lastStepSelected)
@@ -234,5 +194,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun fadeOutAnimation(animationView: LottieAnimationView) {
         val animationFadeOut = AnimationUtils.loadAnimation(this, R.anim.fade_out)
         animationView.startAnimation(animationFadeOut)
+    }
+
+    private fun Toast.showCustomToast(message: String, activity: Activity, x: Int, y: Int) {
+        val layout = activity.layoutInflater.inflate(
+            R.layout.custom_toaster,
+            activity.findViewById(R.id.ll_wrapper)
+        )
+
+        val textView = layout.findViewById<TextView>(R.id.tv_toaster)
+        textView.text = message
+
+        this.apply {
+            setGravity(Gravity.CENTER_VERTICAL, 0, 0)
+            setGravity(Gravity.START, x, 0)
+            layout.findViewById<MaterialButton>(R.id.ok_button).setOnClickListener {
+                cancel()
+            }
+            view = layout
+            show()
+        }
     }
 }

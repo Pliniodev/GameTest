@@ -24,7 +24,8 @@ class App: Application() {
                 dataModules,
                 domainModules,
                 databaseModule,
-                repositoryModule
+                repositoryModule,
+                sharedPrefModule
             )
         }
     }

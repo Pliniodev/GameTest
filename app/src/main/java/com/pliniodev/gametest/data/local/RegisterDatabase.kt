@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.pliniodev.gametest.data.local.model.StepModel
-import com.pliniodev.gametest.data.local.repository.StepDAO
+import com.pliniodev.gametest.data.local.dao.StepDAO
 
 
 @Database(entities = [StepModel::class], version = 1)
