@@ -15,5 +15,5 @@ data class StepModel(
     var stepNumber: Int = 0,
 
     @ColumnInfo(name = "phrase")
-    var phrase: String = ""
+    var phrase: String = "",
 )
