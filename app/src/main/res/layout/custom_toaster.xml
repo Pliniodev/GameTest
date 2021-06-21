@@ -8,16 +8,17 @@
     android:id="@+id/ll_wrapper"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    android:paddingStart="40dp"
-    android:paddingEnd="40dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
     android:background="@drawable/shape_toaster">
 
     <TextView
+        android:textAlignment="center"
         android:id="@+id/tv_toaster"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="impsum"
-        android:textSize="16sp"
+        android:textSize="12sp"
         android:layout_marginBottom="20dp"/>
 
     <com.google.android.material.button.MaterialButton
