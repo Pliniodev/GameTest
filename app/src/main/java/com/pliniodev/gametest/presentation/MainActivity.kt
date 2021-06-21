@@ -35,6 +35,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         updateBD()
     }
 
+    override fun onResume() {
+        super.onResume()
+        //if first run
+        viewModel.registerDate()
+    }
+
     private fun updateBD() {
         viewModel.updateBD()
     }

@@ -9,6 +9,9 @@ import com.pliniodev.gametest.data.local.repository.StepRepository
 import com.pliniodev.gametest.domain.usecase.GetPhraseUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import org.joda.time.DateTime
+import org.joda.time.DateTimeZone
+import java.util.*
 
 class MainViewModel(
     private val useCase: GetPhraseUseCase,
@@ -36,7 +39,9 @@ class MainViewModel(
     }
 
     fun getPhrase(stepNumber: Int) {
-        phraseLiveData.postValue(database.getPhrase(stepNumber).phrase)
+        viewModelScope.launch(Dispatchers.Default) {
+            phraseLiveData.postValue(database.getPhrase(stepNumber).phrase)
+        }
     }
 
     fun updateBD() {
@@ -56,10 +61,6 @@ class MainViewModel(
         }
     }
 
-    private fun isOlderOneDay(): Boolean {
-        TODO("Not yet implemented")
-    }
-
     private fun updatePhrasesOnBd(phraseMutableList: MutableList<String>) {
         var i = 1
         for (phrase in phraseMutableList) {
@@ -71,4 +72,23 @@ class MainViewModel(
             database.saveStepData(stepModel)
         }
     }
+
+    private fun isOlderOneDay(): Boolean {
+        val lastAccessDay = shared.getInt("lastAccessDay", 0)
+        val now = getDate().dayOfMonth().get()
+        return (lastAccessDay - now) > 1
+    }
+
+    fun registerDate() {
+        val lastDayAccess = getDate().dayOfMonth().get()
+        sharedEditor = shared.edit()
+        sharedEditor.putInt("lastAccessDay", lastDayAccess)
+        sharedEditor.apply()
+    }
+
+    private fun getDate(): DateTime {
+        val dt = DateTime()
+        return dt.withZone(DateTimeZone.forID("America/Sao_Paulo"))
+    }
+
 }
