@@ -11,7 +11,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
-import java.util.*
 
 class MainViewModel(
     private val useCase: GetPhraseUseCase,
