@@ -5,11 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Step")
-data class StepModel(
+data class StepEntity(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    var id: Int = 0,
+    var id: Long = 0,
 
     @ColumnInfo(name = "stepNumber")
     var stepNumber: Int = 0,
