@@ -39,105 +39,105 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="100dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_1" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_200"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="200dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_2" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_300"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="300dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_3" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_400"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="400dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_4" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="500dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_5" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_600"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="600dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_6" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_700"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="700dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_7" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_800"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="800dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_8" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_900"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="900dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_9" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_1000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="1000dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_10" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_1100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="1100dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_11" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_1200"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="1200dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_12" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_1300"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="1300dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_13" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_1400"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="1400dp" />
+            app:layout_constraintGuide_begin="@dimen/dimen_guideline_14" />
 
         <!-- VIEWS  -->
         <!-- LINE 1 -->
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +147,7 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -157,7 +157,7 @@
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintStart_toStartOf="@id/guideline_50"
@@ -166,7 +166,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -191,7 +191,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -200,7 +200,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -209,7 +209,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -219,7 +219,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -230,7 +230,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -239,7 +239,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -248,7 +248,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -258,7 +258,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -281,7 +281,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -290,7 +290,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -299,7 +299,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -309,7 +309,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -320,7 +320,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="@string/step_5"
             android:elevation="5dp"
             android:textSize="32sp"
@@ -332,16 +332,17 @@
         <ImageView
             android:id="@+id/step_5"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/guideline_400"
             app:srcCompat="@drawable/ic_step_vertical" />
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -350,7 +351,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -360,7 +361,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -409,7 +410,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -418,7 +419,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -427,7 +428,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -437,7 +438,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -483,7 +484,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -493,7 +494,7 @@
         <ImageView
             android:id="@+id/step_4"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -502,7 +503,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -512,7 +513,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -537,7 +538,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -546,7 +547,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -555,7 +556,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -565,7 +566,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -600,7 +601,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -609,7 +610,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -619,7 +620,7 @@
         <ImageView
             android:id="@+id/step_3"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -629,7 +630,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -654,7 +655,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -663,7 +664,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -672,7 +673,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -682,7 +683,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -705,7 +706,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -714,7 +715,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -723,7 +724,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -733,7 +734,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -755,7 +756,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -765,7 +766,7 @@
         <ImageView
             android:id="@+id/step_2"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -774,7 +775,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -784,7 +785,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -821,7 +822,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -830,7 +831,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -839,7 +840,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -849,7 +850,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -871,7 +872,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -880,7 +881,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -890,7 +891,7 @@
         <ImageView
             android:id="@+id/step_1"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -900,7 +901,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"
@@ -925,7 +926,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_25"
             app:layout_constraintStart_toStartOf="parent"
@@ -934,7 +935,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_50"
             app:layout_constraintStart_toStartOf="@id/guideline_25"
@@ -943,7 +944,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintHorizontal_bias="0.0"
@@ -953,7 +954,7 @@
 
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/dimen_height_block"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/guideline_75"

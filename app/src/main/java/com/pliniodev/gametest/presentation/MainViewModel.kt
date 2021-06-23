@@ -4,6 +4,7 @@ import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.pliniodev.gametest.constants.Constants
 import com.pliniodev.gametest.data.local.model.StepModel
 import com.pliniodev.gametest.data.local.repository.StepRepository
 import com.pliniodev.gametest.domain.usecase.GetPhraseUseCase
@@ -38,13 +39,11 @@ class MainViewModel(
     }
 
     fun getPhrase(stepNumber: Int) {
-        viewModelScope.launch(Dispatchers.Default) {
-            phraseLiveData.postValue(database.getPhrase(stepNumber).phrase)
-        }
+        phraseLiveData.postValue(database.getPhrase(stepNumber).phrase)
     }
 
-    fun updateBD() {
-        if (isOlderOneDay()){
+    fun updateBD(firstRun: Boolean) {
+        if (isOlderOneDay() || firstRun){
             viewModelScope.launch(Dispatchers.IO) {
                 runCatching {
                     useCase()

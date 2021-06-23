@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_height_block">90dp</dimen>
+    <dimen name="dimen_guideline_1">90dp</dimen>
+    <dimen name="dimen_guideline_2">180dp</dimen>
+    <dimen name="dimen_guideline_3">270dp</dimen>
+    <dimen name="dimen_guideline_4">360dp</dimen>
+    <dimen name="dimen_guideline_5">450dp</dimen>
+    <dimen name="dimen_guideline_6">540dp</dimen>
+    <dimen name="dimen_guideline_7">630dp</dimen>
+    <dimen name="dimen_guideline_8">720dp</dimen>
+    <dimen name="dimen_guideline_9">810dp</dimen>
+    <dimen name="dimen_guideline_10">900dp</dimen>
+    <dimen name="dimen_guideline_11">990dp</dimen>
+    <dimen name="dimen_guideline_12">1080dp</dimen>
+    <dimen name="dimen_guideline_13">1170dp</dimen>
+    <dimen name="dimen_guideline_14">1260dp</dimen>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_height_block">100dp</dimen>
+    <dimen name="dimen_guideline_1">100dp</dimen>
+    <dimen name="dimen_guideline_2">200dp</dimen>
+    <dimen name="dimen_guideline_3">300dp</dimen>
+    <dimen name="dimen_guideline_4">400dp</dimen>
+    <dimen name="dimen_guideline_5">500dp</dimen>
+    <dimen name="dimen_guideline_6">600dp</dimen>
+    <dimen name="dimen_guideline_7">700dp</dimen>
+    <dimen name="dimen_guideline_8">800dp</dimen>
+    <dimen name="dimen_guideline_9">900dp</dimen>
+    <dimen name="dimen_guideline_10">1000dp</dimen>
+    <dimen name="dimen_guideline_11">1100dp</dimen>
+    <dimen name="dimen_guideline_12">1200dp</dimen>
+    <dimen name="dimen_guideline_13">1300dp</dimen>
+    <dimen name="dimen_guideline_14">1400dp</dimen>
+</resources>
