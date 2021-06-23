@@ -1,6 +1,7 @@
 package com.pliniodev.gametest.presentation
 
 import android.app.Activity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
@@ -22,27 +23,30 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var lastStepSelected: LottieAnimationView
     private var coordenates = intArrayOf(0, 0)
+    private lateinit var sharedPreferences: SharedPreferences
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        sharedPreferences = getSharedPreferences("firstRun", MODE_PRIVATE)
         setFocusDown()
         setListeners()
         observers()
         requestLastStep()
-        updateBD()
     }
 
     override fun onResume() {
         super.onResume()
-        //if first run
-        viewModel.registerDate()
-    }
-
-    private fun updateBD() {
-        viewModel.updateBD()
+        if (sharedPreferences.getBoolean("firstRun", true)) {
+            sharedPreferences.edit().putBoolean("firstRun", false).apply()
+            viewModel.registerDate()
+            viewModel.updateBD(true)
+        } else{
+            viewModel.updateBD(false)
+        }
     }
 
     private fun getLocationOnScreen(view: View): IntArray {
@@ -138,7 +142,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 coordenates = getLocationOnScreen(binding.step1)
                 viewModel.getPhrase(Constants.STEP1) // busca a frase na api
                 viewModel.updateSelectedStep(Constants.STEP1) //escreve no banco de dados
-
             }
             R.id.step_2 -> {
                 startOnClickAnimation(binding.animationStep2, lastStepSelected)

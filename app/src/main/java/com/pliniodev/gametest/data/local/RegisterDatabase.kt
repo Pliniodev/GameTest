@@ -13,7 +13,6 @@ abstract class RegisterDatabase : RoomDatabase() {
     abstract val stepDAO: StepDAO
 }
 
-
 internal fun provideDatabase(application: Application): RegisterDatabase {
     return Room.databaseBuilder(application, RegisterDatabase::class.java, "registerDB")
         .allowMainThreadQueries()
