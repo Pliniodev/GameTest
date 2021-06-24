@@ -869,6 +869,7 @@
             android:text="@string/step_1"
             android:elevation="5dp"
             android:textSize="32sp"
+            android:textColor="#3C160A"
             app:layout_constraintEnd_toStartOf="@id/guideline_75"
             app:layout_constraintStart_toStartOf="@id/guideline_50"
             app:layout_constraintTop_toTopOf="@id/guideline_1300"
