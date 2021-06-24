@@ -1,4 +1,5 @@
-# Jogo do elefantinho
+# Jogo do elefantinho 
+#### Clean arquitecture | Coroutines | Koin | MVVM | Room | Retrofit
 
 **Projeto**
 
