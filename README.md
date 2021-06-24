@@ -86,6 +86,7 @@ Mostrar o meu nível técnico atual nas tecnologias utilizadas no projeto.
 - [x] Requisitar dados somente do banco de dados
 - [x] Gravar dados da api no banco de dados
 - [x] Realizar animações utilizando a biblioteca Lottie
+- [x] Usar somente blocos em SVG para compor as imagens
 - [ ] Toast em cima de views específicas
 - [ ] Adaptar a tela do NEXUS 9
 
