@@ -15,6 +15,7 @@
 * [Retrofit](https://github.com/Pliniodev/GameTest/blob/main/app/src/main/java/com/pliniodev/gametest/data/remote/retrofit/RetrofitClient.kt)
 * [Coroutines](https://github.com/Pliniodev/GameTest/blob/main/app/src/main/java/com/pliniodev/gametest/presentation/MainViewModel.kt)
 * [Clean arquitecture](https://github.com/Pliniodev/GameTest/tree/main/app/src/main/java/com/pliniodev/gametest)
+* [Apk versão Debug](https://github.com/Pliniodev/GameTest/blob/main/app-debug.apk)
 
 
 <h1 align="center">Sobre o projeto</h1>
