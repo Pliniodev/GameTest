@@ -9,9 +9,7 @@ class ApiRepositoryImpl(
     private val remoteDataSource: RemoteDataSource
 ) : ApiRepository {
 
-    private val mapper: PhraseToPresentationMapper = PhraseToPresentationMapper()
-
     override suspend fun getPhrase(): List<PhrasePresentation> {
-        return mapper.map(remoteDataSource.getPhrases())
+        return PhraseToPresentationMapper.mapPhrase(remoteDataSource.getPhrases())
     }
 }

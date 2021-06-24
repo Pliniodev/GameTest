@@ -4,11 +4,10 @@ import android.app.Application
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.pliniodev.gametest.data.local.model.StepModel
 import com.pliniodev.gametest.data.local.dao.StepDAO
+import com.pliniodev.gametest.data.local.model.StepEntity
 
-
-@Database(entities = [StepModel::class], version = 1)
+@Database(entities = [StepEntity::class], version = 1)
 abstract class RegisterDatabase : RoomDatabase() {
     abstract val stepDAO: StepDAO
 }

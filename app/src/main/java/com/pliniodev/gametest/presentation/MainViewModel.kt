@@ -4,18 +4,19 @@ import android.content.SharedPreferences
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pliniodev.gametest.constants.Constants
-import com.pliniodev.gametest.data.local.model.StepModel
-import com.pliniodev.gametest.data.local.repository.StepRepository
-import com.pliniodev.gametest.domain.usecase.GetPhraseUseCase
+import com.pliniodev.gametest.data.local.model.StepEntity
+import com.pliniodev.gametest.domain.usecase.ApiUseCase
+import com.pliniodev.gametest.domain.usecase.DBUseCase
+import com.pliniodev.gametest.domain.usecase.UpdateDBUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
 
 class MainViewModel(
-    private val useCase: GetPhraseUseCase,
-    private val database: StepRepository,
+    private val apiUseCase: ApiUseCase,
+    private val dbPhraseUseCase: DBUseCase,
+    private val updateDBUseCase: UpdateDBUseCase,
     private val shared: SharedPreferences,
     private var sharedEditor: SharedPreferences.Editor
 ) : ViewModel() {
@@ -39,14 +40,22 @@ class MainViewModel(
     }
 
     fun getPhrase(stepNumber: Int) {
-        phraseLiveData.postValue(database.getPhrase(stepNumber).phrase)
+        viewModelScope.launch(Dispatchers.IO) {
+            runCatching {
+                dbPhraseUseCase(stepNumber)
+            }.onSuccess {
+                phraseLiveData.postValue(it.phrase)
+            }.onFailure {
+                errorLiveData.postValue(it.message)
+            }
+        }
     }
 
     fun updateBD(firstRun: Boolean) {
-        if (isOlderOneDay() || firstRun){
+        if (isOlderOneDay() || firstRun) {
             viewModelScope.launch(Dispatchers.IO) {
                 runCatching {
-                    useCase()
+                    apiUseCase()
                 }.onSuccess { presentationList ->
                     for (phrase in presentationList) {
                         phraseMutableList.add(phrase.text)
@@ -59,15 +68,15 @@ class MainViewModel(
         }
     }
 
-    private fun updatePhrasesOnBd(phraseMutableList: MutableList<String>) {
+    private suspend fun updatePhrasesOnBd(phraseMutableList: MutableList<String>) {
         var i = 1
         for (phrase in phraseMutableList) {
-            val stepModel = StepModel(
+            val stepModel = StepEntity(
                 stepNumber = i,
                 phrase = phrase
             )
             i++
-            database.saveStepData(stepModel)
+            updateDBUseCase(stepModel)
         }
     }
 

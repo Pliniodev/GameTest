@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var coordenates = intArrayOf(0, 0)
     private lateinit var sharedPreferences: SharedPreferences
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
