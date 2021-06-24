@@ -1,20 +1,19 @@
-# Chuck_Norris_Facts
-Consumo de Api com Retrofit, Injeção de dependências com Koin e chamadas assíncronas com Coroutine.
+# Jogo do elefantinho
 
 **Projeto**
 
-[Clique aqui e Veja o projeto](https://github.com/Pliniodev/Chuck_Norris_Facts/projects/2)
+[Clique aqui e Veja o projeto](https://github.com/Pliniodev/GameTest/projects/1)
 
 **Tecnologias aplicadas**
 
 (Clique nos links para ir direto aos arquivos ou pastas relacionadas) 
 
 * Kotlin
-* [Padrão MVVM](https://github.com/Pliniodev/Chuck_Norris_Facts/tree/main/app/src/main/java/com/pliniodev/chucknorrisfacts)
-* [Koin](https://github.com/Pliniodev/Chuck_Norris_Facts/blob/main/app/src/main/java/com/pliniodev/chucknorrisfacts/di/MainModule.kt)
-* [Retrofit](https://github.com/Pliniodev/Chuck_Norris_Facts/blob/main/app/src/main/java/com/pliniodev/chucknorrisfacts/service/retrofit/RetrofitClient.kt)
-* [Coroutines](https://github.com/Pliniodev/Chuck_Norris_Facts/blob/main/app/src/main/java/com/pliniodev/chucknorrisfacts/viewmodel/MainViewModel.kt)
-* [Testes unitários](https://github.com/Pliniodev/Chuck_Norris_Facts/blob/main/app/src/test/java/com/pliniodev/chucknorrisfacts/service/model/FactTest.kt)
+* [Padrão MVVM](https://github.com/Pliniodev/GameTest/tree/main/app/src/main/java/com/pliniodev/gametest/presentation)
+* [Koin](https://github.com/Pliniodev/GameTest/tree/main/app/src/main/java/com/pliniodev/gametest/di)
+* [Retrofit](https://github.com/Pliniodev/GameTest/blob/main/app/src/main/java/com/pliniodev/gametest/data/remote/retrofit/RetrofitClient.kt)
+* [Coroutines](https://github.com/Pliniodev/GameTest/blob/main/app/src/main/java/com/pliniodev/gametest/presentation/MainViewModel.kt)
+* [Clean arquitecture](https://github.com/Pliniodev/GameTest/tree/main/app/src/main/java/com/pliniodev/gametest)
 
 
 <h1 align="center">Sobre o projeto</h1>
@@ -30,7 +29,7 @@ Consumo de Api com Retrofit, Injeção de dependências com Koin e chamadas ass�
 
 Clone o repositório para sua máquina local e importe para o Android Studio
 ```bash
-$ git clone https://github.com/Pliniodev/Chuck_Norris_Facts.git
+$ git clone https://github.com/Pliniodev/GameTest.git
 ```
 -----------
 
@@ -41,20 +40,41 @@ Aprendizado - Melhorar o código de acordo com a evolução das técnicas.
 Mostrar o meu nível técnico atual nas tecnologias utilizadas no projeto.
 </p>
 
+### Imagens do app em diferentes telas
+#### OBS.: EM TODAS AS TELAS FOI IMPLEMENTADO UM SCROLL PARA O USUÁRIO VISUALIZAR TODA A TELA
+<h3 align="center">Nexux One</h3>
+<p align="center">
+ 
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183305-ab901a80-d467-11eb-8dd8-ec4653efc0c2.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183557-26f1cc00-d468-11eb-9a08-7263ca0d1b65.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183612-412baa00-d468-11eb-84bc-a835470bd9ee.png"/>
+ 
+ </p>
+ 
+ <h3 align="center">Nexux 4</h3>
+<p align="center">
+ 
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183305-ab901a80-d467-11eb-8dd8-ec4653efc0c2.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183557-26f1cc00-d468-11eb-9a08-7263ca0d1b65.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183612-412baa00-d468-11eb-84bc-a835470bd9ee.png"/>
+ 
+ </p>
+ 
+ 
 ### Features
 
 - [x] Consumir Api
-- [x] Trocar de telas
-- [x] Verificar tamanho da fonte de acordo com os textos recebidos
-- [x] Realizar consulta aleatória(Random Search)
-- [x] Realizar consulta aleatória com escolha de categorias (Random By Categories)
-- [x] Realizar consulta livre (Free Search)
+- [x] Usar Lib Lottie
+- [x] Requisitar a api somente 1 vez a cada 1 dia
+- [x] Requisitar dados somente do banco de dados
+- [x] Gravar dados da api no banco de dados
+- [x] Realizar animações utilizando a biblioteca Lottie
 
 ### Testes
 
-- [x] Testes unitários
-- [x] Testes instrumentados
-- [x] Testes de UI
+- [] Testes unitários
+- [] Testes instrumentados
+- [] Testes de UI
 
 ### Tecnologias
 
@@ -64,3 +84,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Coroutines](https://developer.android.com/kotlin/coroutines?hl=pt-br)
 - [Espresso](https://developer.android.com/training/testing/espresso)
 - [Retrofit](https://square.github.io/retrofit/)
+- [Lottie](https://github.com/airbnb/lottie-android)
