@@ -51,13 +51,29 @@ Mostrar o meu nível técnico atual nas tecnologias utilizadas no projeto.
  
  </p>
  
- <h3 align="center">Nexux 4</h3>
+<h3 align="center">Nexux 4</h3>
 <p align="center">
  
- <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183305-ab901a80-d467-11eb-8dd8-ec4653efc0c2.png"/>
- <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183557-26f1cc00-d468-11eb-9a08-7263ca0d1b65.png"/>
- <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183612-412baa00-d468-11eb-84bc-a835470bd9ee.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183875-e2b2fb80-d468-11eb-9c6c-3a68b9190238.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183948-08d89b80-d469-11eb-81f2-6c0880a38c11.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123183988-1b52d500-d469-11eb-9c1c-1bb60cfd2fd1.png"/>
+
+ </p>
  
+<h3 align="center">Nexux 6</h3>
+<p align="center">
+ 
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123184262-b51a8200-d469-11eb-97a6-351b251c59f0.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123184322-d2e7e700-d469-11eb-833c-780bcb97c88a.png"/>
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123184328-d5e2d780-d469-11eb-96fa-2816873b431a.png"/>
+
+ </p>
+ 
+<h3 align="center">Nexux 9 - Ainda em desenvolvimento</h3>
+<p align="center">
+ 
+ <img align="center" height="400em" src="https://user-images.githubusercontent.com/50078639/123184584-5dc8e180-d46a-11eb-928e-245e877c4db9.png"/>
+
  </p>
  
  
@@ -69,12 +85,14 @@ Mostrar o meu nível técnico atual nas tecnologias utilizadas no projeto.
 - [x] Requisitar dados somente do banco de dados
 - [x] Gravar dados da api no banco de dados
 - [x] Realizar animações utilizando a biblioteca Lottie
+- [ ] Toast em cima de views específicas
+- [ ] Adaptar a tela do NEXUS 9
 
 ### Testes
 
-- [] Testes unitários
-- [] Testes instrumentados
-- [] Testes de UI
+- [ ] Testes unitários
+- [ ] Testes instrumentados
+- [ ] Testes de UI
 
 ### Tecnologias
 
