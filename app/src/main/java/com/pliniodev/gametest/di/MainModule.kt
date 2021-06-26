@@ -3,7 +3,7 @@ package com.pliniodev.gametest.di
 import android.content.SharedPreferences
 import com.pliniodev.gametest.data.local.localdatasource.LocalDataSource
 import com.pliniodev.gametest.data.local.localdatasource.LocalDataSourceImpl
-import com.pliniodev.gametest.data.local.provideDatabase
+import com.pliniodev.gametest.data.local.provideDB
 import com.pliniodev.gametest.data.local.provideStepDAO
 import com.pliniodev.gametest.data.local.repository.StepRepositoryImpl
 import com.pliniodev.gametest.data.local.sharedpreferences.getSharedPrefs
@@ -48,7 +48,7 @@ val networkModules = module {
 }
 
 val databaseModule = module {
-    single { provideDatabase(application = get()) }
+    single { provideDB(application = get()) }
     single { provideStepDAO(database = get()) }
 }
 
