@@ -19,6 +19,7 @@ class MainViewModel(
     private val updateDBUseCase: UpdateDBUseCase,
     private val shared: SharedPreferences,
     private var sharedEditor: SharedPreferences.Editor
+    //aaa
 ) : ViewModel() {
 
     val lastSelectedStepLiveData = MutableLiveData<Int>()
